@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>所有文章</title>
+    </head>
+    <body>
+        {% for article in articles %}
+        <a href="{% url 'article_detail' article.id %}">
+            <h2>{{ article.title }}</h2>
+        </a>
+        <hr>
+        {% endfor %}
+    </body>
+</html>
