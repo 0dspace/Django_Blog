@@ -4,7 +4,8 @@ from .models import Article
 
 
 def article_list(request):
-    articles = Article.objects.all()
+    # articles = Article.objects.all()
+    articles = Article.objects.filter(is_deleted=False)
     return render_to_response('articles.html', {'articles': articles})
 
 
